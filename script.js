@@ -12,9 +12,11 @@ function generatePassword(){
 
   // Set Veriables
   var userPassLength = Number(prompt(" Please Select Password Size (Must be between 8 -128 characters)"));
-    if (userPassLength < 8 || userPassLength > 128){
-    return "You Don't Listen! \n Password Length Must Be 8 - 128 \n Please Try Again"
+   console.log(userPassLength);
+    if (userPassLength < 8 || userPassLength > 128 || isNaN(userPassLength)){
+      return "You Don't Listen! \n Password Length Must Be 8 - 128 \n Please Try Again"
     };
+    
   var userInputNum = confirm("Do you want to include Numbers");
   var userInputUpper = confirm("Do you want to include UPPER CASE LETTERS");
   var userInputLower = confirm("Do you want to include lower case letters");
